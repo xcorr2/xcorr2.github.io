@@ -5,12 +5,13 @@ title: Home
 
 # My Blog Posts
 
-<ul>
+<div class="post-list">
   {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-      <p><small>{{ post.date | date: "%Y-%m-%d" }}</small></p>
-    </li>
+    <article class="home-post">
+      <h2>{{ post.title }}</h2>
+      <p><em>{{ post.date | date: "%Y-%m-%d" }}</em></p>
+      {{ post.content }}
+      <hr>
+    </article>
   {% endfor %}
-</ul>
+</div>
