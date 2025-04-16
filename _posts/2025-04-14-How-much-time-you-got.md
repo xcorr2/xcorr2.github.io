@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "test"
+title: "GPU v CPU, and how does batch size effect time to train a model?"
 date: 2025-04-14
 excerpt: GPU v CPU, and how does batch size effect time to train a model?
 ---
