@@ -15,7 +15,7 @@ achieve image processing on a CPU but doesn't mean the joys of a GPU can't be ex
 # But was it a bird though?
 A bird recogniser was tested on both a GPU and CPU. It would scrape images of birds and woodland landscapes and try to determine whether each image was a bird or landscape compared to one singular referecne image of each. The results were not surprising. 
 The CPU took multiple minutes to train the model while the GPU took less than 30 seconds.  
-![Alt text](./assets/CPU_time.png)
+![Alt text](../assets/CPU_time.png)
 ![Alt text](/assets/images/CPU_time.png)
 
 This wasn't the only thing that could be done to speed up processing time however.
