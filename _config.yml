@@ -5,6 +5,10 @@ logo: "../docs/assets/logo_img.png"
 color_scheme: dark
 nav_enabled: true
 
+callouts:
+  important:
+    title: important
+    color: blue
 
 
 future: true
