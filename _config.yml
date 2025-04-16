@@ -2,5 +2,9 @@ theme: jekyll-theme-minimal
 title: Lachlan's homepage
 description: my elec 4630 blog to document my learning
 logo: "../docs/assets/logo_img.png"
+color_scheme: dark
+nav_enabled: true
+
+
 
 future: true
