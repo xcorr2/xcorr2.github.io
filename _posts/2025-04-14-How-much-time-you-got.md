@@ -8,20 +8,20 @@ excerpt: GPU v CPU, and how does batch size effect time to train a model?
 Fastai proved many things, one of them being that you don't need high end computing power and an all nighter in a computer lab to perform deep learning. The deep-learning library allows even a low level laptop to perform some form of image processing. 
 But that doesn't mean we can't give it a nudge. That same low level laptop would likely utilises a CPU. It does the job, functioning as the brains of the laptop but is very linear. Processes occur in sequential order. 
 
-# The good stuff
-GPU can handle the same operations as a CPU but can do so in parallel. No more are the days of singlular computations. GPUs can compute several operations at the same time and accelerate processing time dramatically. Fastai gives the capacity to 
-achieve image processing on a CPU but doesn't mean the joys of a GPU can't be experienced. 
+# GPUs
+GPU can handle the same operations as a CPU but can do so in parallel. No more are the days of singlular computations. GPUs can compute several operations at the same time and accelerate processing time dramatically. Fastai gives the capacity to achieve image processing on a CPU but doesn't mean the joys of a GPU can't be experienced. 
 
-# But was it a bird though?
+# But was it a bird?
 A bird recogniser was tested on both a GPU and CPU. It would scrape images of birds and woodland landscapes and try to determine whether each image was a bird or landscape compared to one singular referecne image of each. The results were not surprising. 
 The CPU took multiple minutes to train the model while the GPU took less than 30 seconds.  
 ![Alt text](../assets/CPU_time.png)
-![Alt text](/assets/images/CPU_time.png)
+![Alt text](../assets/GPU_time.png)
 
 This wasn't the only thing that could be done to speed up processing time however.
 
 # Batch Maker
 To train a model a data loader is made. This object contains the images to be used for training as well as a validation set of images which is used to be compared agaisnt to check the accuracy of the model. When processing the data set the model goes thorugh an epoch, which is one full rotation through each image. If there are 10 images in a data set then one epoch is 10 images processed. In the example code 3 epochs are completed. But not all 10 images are going to be inspected at once. A batch is a subset of data that the model processes first then adjusts its internal weighting to better match the images it sees. A batch size of 1 would mean that for a set of 10 images, in one epoch, 10 checks and reweighting occurs. 
+
  ```tsql
 dls = DataBlock(
     blocks=(ImageBlock, CategoryBlock), 
