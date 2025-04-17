@@ -15,9 +15,9 @@ GPU can handle the same operations as a CPU but can do so in parallel. No more a
 A bird recogniser was tested on both a GPU and CPU. It would scrape images of birds and woodland landscapes and try to determine whether each image was a bird or landscape compared to one singular referecne image of each. The results were not surprising. 
 The CPU took over 8 minutes to train the model while the GPU took less than 50 seconds. 
 
-![Alt text](../assets/CPU_time.png)
+![Alt text](../docs/assets/CPU_time.png)
 
-![Alt text](../assets/GPU_time.png)
+![Alt text](../docs/assets/GPU_time.png)
 
 This wasn't the only thing that could be done to speed up processing time however.
 
